@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tyU-sr-M9S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Person View Controller-->
+        <scene sceneID="SHd-eC-Q8c">
+            <objects>
+                <viewController id="tyU-sr-M9S" customClass="PersonViewController" customModule="Pair_Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZjQ-5U-PB3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU7-AD-3IQ">
+                                <rect key="frame" x="100" y="787" width="214" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomizeButtonTapped:" destination="tyU-sr-M9S" eventType="touchUpInside" id="ezQ-r1-RiX"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-jd-LaR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Pairs" id="ZCX-sE-v2i">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sEM-fP-Fnt">
+                                            <connections>
+                                                <action selector="addPersonButtonTapped:" destination="tyU-sr-M9S" id="eBr-2O-GBG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kjS-FW-Y4e">
+                                <rect key="frame" x="0.0" y="88" width="414" height="609.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personCell" id="FTE-6u-HGz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTE-6u-HGz" id="cvD-N3-QEX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KU7-AD-3IQ" firstAttribute="leading" secondItem="YiV-fI-bxT" secondAttribute="leading" constant="100" id="1ny-By-Fw4"/>
+                            <constraint firstItem="x8J-jd-LaR" firstAttribute="top" secondItem="YiV-fI-bxT" secondAttribute="top" id="3Pc-Xw-xBf"/>
+                            <constraint firstItem="YiV-fI-bxT" firstAttribute="trailing" secondItem="kjS-FW-Y4e" secondAttribute="trailing" id="FTU-Lx-dsf"/>
+                            <constraint firstItem="x8J-jd-LaR" firstAttribute="leading" secondItem="YiV-fI-bxT" secondAttribute="leading" id="TLp-Aq-1jb"/>
+                            <constraint firstItem="YiV-fI-bxT" firstAttribute="trailing" secondItem="KU7-AD-3IQ" secondAttribute="trailing" constant="100" id="VW9-uJ-3Uw"/>
+                            <constraint firstItem="kjS-FW-Y4e" firstAttribute="height" secondItem="ZjQ-5U-PB3" secondAttribute="height" multiplier="0.68" id="WFy-rL-GUY"/>
+                            <constraint firstItem="kjS-FW-Y4e" firstAttribute="leading" secondItem="YiV-fI-bxT" secondAttribute="leading" id="WQC-eE-yTt"/>
+                            <constraint firstItem="YiV-fI-bxT" firstAttribute="bottom" secondItem="KU7-AD-3IQ" secondAttribute="bottom" constant="40" id="iqi-Zf-k4H"/>
+                            <constraint firstItem="kjS-FW-Y4e" firstAttribute="top" secondItem="x8J-jd-LaR" secondAttribute="bottom" id="nCh-ey-Eum"/>
+                            <constraint firstItem="x8J-jd-LaR" firstAttribute="trailing" secondItem="YiV-fI-bxT" secondAttribute="trailing" id="nty-lM-l4s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YiV-fI-bxT"/>
+                    </view>
+                    <connections>
+                        <outlet property="personListTableView" destination="kjS-FW-Y4e" id="kEX-7a-ESZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rx5-5C-fqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="210"/>
+        </scene>
+    </scenes>
+</document>
